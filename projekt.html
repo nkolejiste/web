@@ -25,35 +25,18 @@
           <h1 class="page-title reveal">Kolejiště</h1>
         </div>
         <p class="page-intro reveal">
-          UNDER CONSTRUCTION
+          Příběh a myšlenka celého projektu.
         </p>
       </div>
     </section>
 
-    <!--<section class="project-intro container">
-      <div class="project-stat reveal">
-        <span>01</span>
-        <p>Česká železniční inspirace</p>
-      </div>
-      <div class="project-stat reveal">
-        <span>02</span>
-        <p>Důraz na věrohodnou atmosféru</p>
-      </div>
-      <div class="project-stat reveal">
-        <span>03</span>
-        <p>Průběžně rozvíjený projekt</p>
-      </div>
-    </section>
-
-    <section class="project-block container-wide">
-      <figure class="wide-project-image reveal">
-        <img src="assets/images/kolejiste/projekt.svg" alt="Celkový pohled na modelové kolejiště">
-      </figure>
-      <div class="project-text container">
-        <p class="eyebrow reveal">MYŠLENKA</p>
-        <div class="project-text-grid">
-          <h2 class="section-title reveal">Nejen model.<br>Vlastní železniční svět.</h2>
-          <div class="story-copy reveal">
+    <!-- Nové bloky pro kapitoly -->
+    <section class="chapter-block container">
+      <div class="chapter-grid">
+        <div class="chapter-content reveal">
+          <p class="eyebrow">MYŠLENKA</p>
+          <h2 class="section-title">Nejen model.<br>Vlastní železniční svět.</h2>
+          <div class="story-copy">
             <p>
               Smyslem projektu je vytvořit prostředí, které nepůsobí jako
               vystavená sbírka, ale jako skutečně fungující železnice
@@ -66,48 +49,54 @@
             </p>
           </div>
         </div>
+        <div class="chapter-media reveal">
+          <img src="assets/images/kolejiste/uvodni_foto.jpg" alt="Celkový pohled na modelové kolejiště" onclick="openLightbox(this.src)">
+        </div>
       </div>
     </section>
-
-    <section class="timeline-section container">
-      <p class="eyebrow reveal">VÝVOJ PROJEKTU</p>
-      <h2 class="section-title reveal">Kolejiště se mění<br>spolu s každým detailem.</h2>
-
-      <div class="timeline">
-        <article class="timeline-item reveal">
-          <span>01</span>
-          <div>
-            <h3>Koncepce</h3>
-            <p>Volba prostředí, období, provozu a základního uspořádání kolejiště.</p>
+    
+    <section class="chapter-block container">
+      <div class="chapter-grid">
+        <div class="chapter-content reveal">
+          <p class="eyebrow">ATMOSFÉRA</p>
+          <h2 class="section-title">Krajina a detaily</h2>
+          <div class="story-copy">
+            <p>
+              Významnou částí zážitku je právě uvěřitelné zpracování terénu a okolní přírody. Koleje se vlní přes realisticky zpracované kopce, stromy a zeleň dodávají scéně na životnosti.
+            </p>
           </div>
-        </article>
-        <article class="timeline-item reveal">
-          <span>02</span>
-          <div>
-            <h3>Stavba</h3>
-            <p>Koleje, terén, stanice, infrastruktura a technické zázemí.</p>
-          </div>
-        </article>
-        <article class="timeline-item reveal">
-          <span>03</span>
-          <div>
-            <h3>Atmosféra</h3>
-            <p>Krajina, budovy, provozní detaily a výsledné zasazení vozidel.</p>
-          </div>
-        </article>
+        </div>
+        <div class="chapter-media reveal">
+          <img src="assets/images/kolejiste/uvodni_foto.jpg" alt="Detail krajiny" onclick="openLightbox(this.src)">
+        </div>
       </div>
-    </section>-->
+    </section>
 
     <section class="next-page-panel">
       <div class="container next-page-grid">
         <div>
           <p class="eyebrow">DALŠÍ KAPITOLA</p>
-          <h2 class="section-title">Vozový park.</h2>
+          <h2 class="section-title">Stavba.</h2>
         </div>
-        <a class="circle-link" href="lokomotivy.html" aria-label="Přejít na lokomotivy">↗</a>
+        <a class="circle-link" href="stavba.html" aria-label="Přejít na stavbu">↗</a>
       </div>
     </section>
   </main>
+
+  <div class="lightbox-modal" id="lightboxModal">
+    <button class="lightbox-close" onclick="closeLightbox()">×</button>
+    <img id="lightboxImg" src="" alt="Detailní fotka">
+  </div>
+
+  <script>
+    function openLightbox(src) {
+      document.getElementById('lightboxImg').src = src;
+      document.getElementById('lightboxModal').classList.add('active');
+    }
+    function closeLightbox() {
+      document.getElementById('lightboxModal').classList.remove('active');
+    }
+  </script>
 
   <footer class="site-footer" id="siteFooter"></footer>
 </body>
