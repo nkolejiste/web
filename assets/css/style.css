@@ -233,7 +233,7 @@ button { font: inherit; }
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 18px;
-  padding: 100px 0 0;
+  padding: 80px 0;
   margin: 0;
   position: relative;
   z-index: 10;
@@ -323,7 +323,7 @@ button { font: inherit; }
 
 .story-section {
   position: relative;
-  padding: 100px 0 130px;
+  padding: 80px 0 130px;
   border-bottom: 1px solid var(--line);
 }
 
@@ -332,11 +332,6 @@ button { font: inherit; }
   font-size: 11px;
   letter-spacing: .18em;
   margin-bottom: 70px;
-}
-
-.section-number:empty {
-  display: none;
-  margin: 0;
 }
 
 .story-grid,
@@ -914,12 +909,12 @@ button { font: inherit; }
   .hero-lead { font-size: 16px; }
   .hero-index { display: none; }
 
-  .story-section { padding: 60px 0 90px; }
+  .story-section { padding: 50px 0 90px; }
   .section-number { margin-bottom: 45px; }
   .section-title { font-size: 48px; }
   .story-copy { font-size: 16px; }
 
-  .quick-links { grid-template-columns: 1fr; padding: 60px 0 0; gap: 12px; margin: 0; }
+  .quick-links { grid-template-columns: 1fr; padding: 50px 0; gap: 12px; margin: 0; }
   .quick-link { padding: 20px 22px; }
 
   .feature-image { padding: 0 0 100px; }
