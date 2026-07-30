@@ -642,6 +642,7 @@ button { font: inherit; }
 }
 
 .dialog-hero img {
+  height: auto;
   aspect-ratio: 16/8;
   object-fit: cover;
 }
