@@ -937,3 +937,13 @@ button { font: inherit; }
   .footer-grid { grid-template-columns: 1fr; }
   .copyright { grid-column: auto; margin-top: 10px; }
 }
+
+/* Final spacing adjustment */
+.quick-links { padding-bottom: 12px !important; }
+.quick-link small,
+.quick-link .subtext,
+.quick-link-description {
+  display: block;
+  margin-top: 6px;
+  opacity: .75;
+}
