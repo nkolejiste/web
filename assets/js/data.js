@@ -1,4 +1,4 @@
-const locomotives = [
+export const locomotives = [
   {
     id: "363-526",
     name: "363.526",

@@ -1,3 +1,5 @@
+import { locomotives } from "./data.js";
+
 document.addEventListener("DOMContentLoaded", () => {
   const list = document.getElementById("locomotiveList");
   const count = document.getElementById("locoCount");
@@ -13,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
     list.innerHTML = filtered.map(loco => `
       <article class="loco-row reveal" id="${loco.id}">
         <div class="loco-media">
-          <img src="${loco.image}" alt="${loco.title}">
+          <img src="${loco.image}" alt="${loco.title}" width="2121" height="1414" loading="lazy">
         </div>
         <div class="loco-copy">
           <p class="loco-type">${loco.typeLabel}</p>
@@ -48,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     dialogContent.innerHTML = `
       <div class="dialog-hero">
-        <img src="${loco.image}" alt="${loco.title}">
+        <img src="${loco.image}" alt="${loco.title}" width="2121" height="1414">
         <div class="dialog-title">
           <p>${loco.typeLabel.toUpperCase()}</p>
           <h2>${loco.name}</h2>

@@ -1,4 +1,15 @@
+import { renderHeader, renderFooter } from "./partials.js";
+import { locomotives } from "./data.js";
+
 document.addEventListener("DOMContentLoaded", () => {
+  const activePage = document.body.dataset.page;
+
+  const headerRoot = document.getElementById("siteHeader");
+  if (headerRoot) headerRoot.innerHTML = renderHeader(activePage);
+
+  const footerRoot = document.getElementById("siteFooter");
+  if (footerRoot) footerRoot.innerHTML = renderFooter();
+
   const header = document.getElementById("siteHeader");
   const menuToggle = document.getElementById("menuToggle");
   const mainNav = document.getElementById("mainNav");
@@ -42,10 +53,10 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   const homeGrid = document.getElementById("homeLocoGrid");
-  if (homeGrid && typeof locomotives !== "undefined") {
+  if (homeGrid) {
     homeGrid.innerHTML = locomotives.slice(0, 3).map(loco => `
       <a class="home-loco-card reveal" href="lokomotivy.html#${loco.id}">
-        <img src="${loco.image}" alt="${loco.title}">
+        <img src="${loco.image}" alt="${loco.title}" width="2121" height="1414" loading="lazy">
         <div class="home-loco-content">
           <span>${loco.typeLabel.toUpperCase()}</span>
           <h3>${loco.name}</h3>
