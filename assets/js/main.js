@@ -66,4 +66,33 @@ document.addEventListener("DOMContentLoaded", () => {
 
     homeGrid.querySelectorAll(".reveal").forEach(element => observer.observe(element));
   }
+
+  // Zvětšování fotek (Lightbox)
+  const lightboxModal = document.getElementById("lightboxModal");
+  const lightboxImg = document.getElementById("lightboxImg");
+  const closeBtn = document.querySelector(".lightbox-close");
+
+  if (lightboxModal && lightboxImg) {
+    // Najde všechny fotky v kapitolách a přidá jim funkci po kliknutí
+    document.querySelectorAll(".chapter-media img").forEach(img => {
+      img.addEventListener("click", () => {
+        lightboxImg.src = img.src;
+        lightboxModal.classList.add("active");
+      });
+    });
+
+    // Zavření po kliknutí na křížek
+    if (closeBtn) {
+      closeBtn.addEventListener("click", () => {
+        lightboxModal.classList.remove("active");
+      });
+    }
+
+    // Zavření po kliknutí kamkoliv do černého pozadí
+    lightboxModal.addEventListener("click", (e) => {
+      if (e.target === lightboxModal) {
+        lightboxModal.classList.remove("active");
+      }
+    });
+  }
 });

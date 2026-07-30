@@ -30,7 +30,7 @@
       </div>
     </section>
 
-    <!-- Nové bloky pro kapitoly -->
+    <!-- Nové bloky pro kapitoly (už bez onclick a <script>) -->
     <section class="chapter-block container">
       <div class="chapter-grid">
         <div class="chapter-content reveal">
@@ -50,7 +50,7 @@
           </div>
         </div>
         <div class="chapter-media reveal">
-          <img src="assets/images/kolejiste/uvodni_foto.jpg" alt="Celkový pohled na modelové kolejiště" onclick="openLightbox(this.src)">
+          <img src="assets/images/kolejiste/uvodni_foto.jpg" alt="Celkový pohled na modelové kolejiště">
         </div>
       </div>
     </section>
@@ -67,7 +67,7 @@
           </div>
         </div>
         <div class="chapter-media reveal">
-          <img src="assets/images/kolejiste/uvodni_foto.jpg" alt="Detail krajiny" onclick="openLightbox(this.src)">
+          <img src="assets/images/kolejiste/uvodni_foto.jpg" alt="Detail krajiny">
         </div>
       </div>
     </section>
@@ -84,19 +84,9 @@
   </main>
 
   <div class="lightbox-modal" id="lightboxModal">
-    <button class="lightbox-close" onclick="closeLightbox()">×</button>
+    <button class="lightbox-close">×</button>
     <img id="lightboxImg" src="" alt="Detailní fotka">
   </div>
-
-  <script>
-    function openLightbox(src) {
-      document.getElementById('lightboxImg').src = src;
-      document.getElementById('lightboxModal').classList.add('active');
-    }
-    function closeLightbox() {
-      document.getElementById('lightboxModal').classList.remove('active');
-    }
-  </script>
 
   <footer class="site-footer" id="siteFooter"></footer>
 </body>

@@ -1,6 +1,7 @@
 const NAV_ITEMS = [
   { href: "index.html", label: "Úvod", page: "home" },
   { href: "projekt.html", label: "Projekt", page: "project" },
+  { href: "stavba.html", label: "Stavba", page: "stavba" },
   { href: "lokomotivy.html", label: "Lokomotivy", page: "locomotives" },
 ];
 
