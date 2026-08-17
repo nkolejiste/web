@@ -820,16 +820,13 @@ button { font: inherit; }
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 50px;
+  grid-template-columns: 1fr;
+  gap: 0;
 }
 
 .footer-brand { margin-bottom: 18px; }
 .site-footer p { color: var(--muted); }
-.footer-nav { display: flex; gap: 28px; align-items: start; }
-.footer-nav a { color: var(--muted); }
-.footer-nav a:hover { color: var(--text); }
-.copyright { grid-column: 1 / -1; margin-top: 45px; font-size: 12px; }
+.copyright { margin-top: 45px; font-size: 12px; }
 
 .reveal {
   opacity: 0;
@@ -949,8 +946,7 @@ section[id] {
   .next-page-grid { gap: 30px; }
   .circle-link { width: 72px; height: 72px; flex: 0 0 auto; }
 
-  .footer-grid { grid-template-columns: 1fr; }
-  .copyright { grid-column: auto; margin-top: 10px; }
+  .copyright { margin-top: 10px; }
 }
 
 /* --- NOVÉ STYLY PRO KAPITOLY A LIGHTBOX --- */
